@@ -125,6 +125,7 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 </tr>
 </tbody>
 </table>
+<br clear="all">
 
 ### الفقه: الجدول الجامع
 
@@ -140,6 +141,7 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 <tr><td><strong>الجلوس</strong></td><td>سنة</td><td>سنة</td><td><strong>شرط</strong></td><td>سنة</td></tr>
 </tbody>
 </table>
+<br clear="all">
 
 ### سجل المراجع
 
@@ -153,6 +155,7 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 <tr><td>«أدِّ الأمانة إلى من ائتمنك...»</td><td>أبو داود ٣٥٣٤ / الترمذي ١٢٦٤</td><td>—</td><td>حسن غريب وفيه كلام</td><td>لا يُستخدم وحده</td></tr>
 </tbody>
 </table>
+<br clear="all">
 
 ### بوابة الشعر
 
