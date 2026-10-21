@@ -1,6 +1,13 @@
 # مهارة الخطبة المنبرية
 ### (Arabic Khutba Skill — Fiqh + Craft + Verification)
 
+<p align="center">
+  <a href="https://github.com/specailm5/arabic-khutba-skill/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/specailm5/arabic-khutba-skill?style=flat-square"></a>
+  <a href="https://github.com/specailm5/arabic-khutba-skill/commits/master"><img alt="Last commit" src="https://img.shields.io/github/last-commit/specailm5/arabic-khutba-skill?style=flat-square"></a>
+  <a href="https://specailm5.github.io/arabic-khutba-skill/"><img alt="Docs" src="https://img.shields.io/badge/docs-live-brightgreen?style=flat-square"></a>
+  <img alt="Agent Skills" src="https://img.shields.io/badge/Agent%20Skills-compatible-5B21B6?style=flat-square">
+</p>
+
 **Arabic khutba skill for AI agents** — writes and revises Friday and occasion khutbas with a madhhab-aware fiqh layer, a two-khutba structure, delivery notes, and a strict reference-verification protocol. It asks for the user's madhhab before drafting, refuses to fabricate Quran/hadith citations, keeps a reference ledger, asks permission before adding poetry, and flags sensitive topics. Works with Claude Code, Codex, Antigravity and VS Code agent harnesses.
 
 🔗 **الموقع المرجعي (الدليل والفقه والبناء والتحقق والنماذج): [specailm5.github.io/arabic-khutba-skill](https://specailm5.github.io/arabic-khutba-skill/)**
@@ -27,7 +34,7 @@
 
 ## 📂 بنية المهارة
 
-```
+<pre dir="rtl"><code>
 arabic-khutba-skill/
 │
 ├── skills/arabic-khutba-skill/
@@ -44,7 +51,7 @@ arabic-khutba-skill/
 ├── docs/                                 # الموقع المرجعي (GitHub Pages)
 ├── .agents/skills/arabic-khutba-skill/   # مسار Codex و Antigravity
 └── .claude/skills/arabic-khutba-skill/   # مسار Claude Code
-```
+</code></pre>
 
 ---
 
@@ -88,17 +95,40 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 
 ### الأسئلة الخمسة
 
-| السؤال | لماذا؟ |
-| :--- | :--- |
-| **ما مذهبك/مذهب المسجد؟** | الأركان والشروط واللغة تختلف |
-| **ما المناسبة؟** | لكل مناسبة عقدها |
-| **من الجمهور؟** | المستوى والطول والأمثلة |
-| **ما الموضوع والرسالة الواحدة؟** | الخطبة التي تحمل عشر رسائل لا تحمل رسالة |
-| **هل تسمح بالشعر؟** | لا يُقحم بلا إذن، ولا يُنسب بلا تحقق |
+<table dir="rtl" align="right">
+<thead>
+<tr>
+<th align="right">السؤال</th>
+<th align="right">لماذا؟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ما مذهبك/مذهب المسجد؟</strong></td>
+<td>الأركان والشروط واللغة تختلف</td>
+</tr>
+<tr>
+<td><strong>ما المناسبة؟</strong></td>
+<td>لكل مناسبة عقدها</td>
+</tr>
+<tr>
+<td><strong>من الجمهور؟</strong></td>
+<td>المستوى والطول والأمثلة</td>
+</tr>
+<tr>
+<td><strong>ما الموضوع والرسالة الواحدة؟</strong></td>
+<td>الخطبة التي تحمل عشر رسائل لا تحمل رسالة</td>
+</tr>
+<tr>
+<td><strong>هل تسمح بالشعر؟</strong></td>
+<td>لا يُقحم بلا إذن، ولا يُنسب بلا تحقق</td>
+</tr>
+</tbody>
+</table>
 
 ### الفقه: الجدول الجامع
 
-<table dir="rtl">
+<table dir="rtl" align="right">
 <thead>
 <tr><th align="right">المسألة</th><th align="right">الحنفي</th><th align="right">المالكي</th><th align="right">الشافعي</th><th align="right">الحنبلي</th></tr>
 </thead>
@@ -113,7 +143,7 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 
 ### سجل المراجع
 
-<table dir="rtl">
+<table dir="rtl" align="right">
 <thead>
 <tr><th align="right">النص</th><th align="right">المصدر</th><th align="right">الرقم</th><th align="right">الحكم</th><th align="right">الحالة</th></tr>
 </thead>
@@ -159,6 +189,24 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 - المستخدم مسؤول عن مراجعة النص النهائي مع عالمه/جهته.
 - التحقق من المراجع **شرط**، لا خيار.
 - لا تُستخدم المهارة للتحريض أو التكفير أو التجريح.
+
+---
+
+## 🤝 المساهمة
+
+نرحب بالمساهمات التي تحسّن المادة أو التحرير أو التوثيق. اقرأ [CONTRIBUTING.md](CONTRIBUTING.md) قبل فتح طلب سحب، والتزم بـ[قواعد السلوك](CODE_OF_CONDUCT.md).
+
+## 🛡️ الأمان
+
+إن وجدت مشكلة أمنية، فلا تفتح قضية عامة؛ راجع [SECURITY.md](SECURITY.md).
+
+## 📄 سجل التغييرات
+
+راجع [CHANGELOG.md](CHANGELOG.md) لمعرفة ما أُضيف في كل إصدار.
+
+## 📬 الدعم
+
+للأسئلة والاقتراحات: [افتح قضية](https://github.com/specailm5/arabic-khutba-skill/issues).
 
 ---
 
