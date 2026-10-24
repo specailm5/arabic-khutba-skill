@@ -32,45 +32,22 @@
 
 ---
 
-## 📂 بنية المهارة
-
-<pre dir="rtl"><code>
-arabic-khutba-skill/
-│
-├── skills/arabic-khutba-skill/
-│   ├── SKILL.md                          # الدليل الأساسي (المنهج + الفقه + التحقق)
-│   ├── references/
-│   │   ├── fiqh_madhahib.md             # الأركان والشروط والسنن عند المذاهب الأربعة
-│   │   ├── structure_and_delivery.md     # البناء والجمهور والإلقاء
-│   │   ├── reference_verification.md     # بروتوكول التحقق وسجل المراجع
-│   │   └── occasions_and_sensitivity.md  # المناسبات والحساسية وبوابة الشعر
-│   └── examples/
-│       ├── verified_khutba_outline.md    # نموذج خطبة بمراجع متحققة
-│       └── before_after_khutba.md        # نماذج قبل/بعد
-│
-├── docs/                                 # الموقع المرجعي (GitHub Pages)
-├── .agents/skills/arabic-khutba-skill/   # مسار Codex و Antigravity
-└── .claude/skills/arabic-khutba-skill/   # مسار Claude Code
-</code></pre>
-
----
-
 ## 🚀 التثبيت
-
-### أولاً: بأمر واحد عبر `npx`
 
 ```bash
 npx skills add specailm5/arabic-khutba-skill -g -y
 ```
 
-أو لبيئات محددة:
+<details>
+<summary>تثبيت يدوي، أو لبيئة واحدة فقط</summary>
+
+**لبيئات محددة:**
 
 ```bash
 npx skills add specailm5/arabic-khutba-skill -a claude-code -a codex
-npx skills add specailm5/arabic-khutba-skill --skill arabic-khutba-skill -g -y
 ```
 
-### ثانياً: يدوياً (Windows)
+**Windows (PowerShell):**
 
 ```powershell
 $src = "skills\arabic-khutba-skill"
@@ -85,9 +62,31 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.gemini\config\skill
 Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabic-khutba-skill\"
 ```
 
-### ثالثاً: داخل مشروع (VS Code Workspace)
+**macOS / Linux:**
 
-انسخ `skills/arabic-khutba-skill` إلى `.agents/skills/` أو `.claude/skills/` في جذر مشروعك.
+```bash
+src=skills/arabic-khutba-skill
+
+mkdir -p ~/.claude/skills/arabic-khutba-skill
+cp -r "$src/." ~/.claude/skills/arabic-khutba-skill/
+
+mkdir -p ~/.agents/skills/arabic-khutba-skill
+cp -r "$src/." ~/.agents/skills/arabic-khutba-skill/
+
+mkdir -p ~/.gemini/config/skills/arabic-khutba-skill
+cp -r "$src/." ~/.gemini/config/skills/arabic-khutba-skill/
+```
+
+**داخل مشروع واحد (VS Code):**
+
+```powershell
+New-Item -ItemType Directory -Force -Path ".agents\skills\arabic-khutba-skill"
+Copy-Item -Recurse -Force "path\to\skills\arabic-khutba-skill\*" ".agents\skills\arabic-khutba-skill\"
+```
+
+**بدون بيئة برمجية:** انسخ محتوى [`skills/arabic-khutba-skill/SKILL.md`](skills/arabic-khutba-skill/SKILL.md) إلى التعليمات المخصصة أو System Prompt.
+
+</details>
 
 ---
 
@@ -185,27 +184,26 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 
 ---
 
-## ⚠️ حدود المسؤولية
-
-- المهارة **ليست فتوى**.
-- الأحكام الفقهية تُعرض كما في المصادر، والفتوى للجهة المختصة.
-- المستخدم مسؤول عن مراجعة النص النهائي مع عالمه/جهته.
-- التحقق من المراجع **شرط**، لا خيار.
-- لا تُستخدم المهارة للتحريض أو التكفير أو التجريح.
-
----
-
 ## 🤝 المساهمة
 
 نرحب بالمساهمات التي تحسّن المادة أو التحرير أو التوثيق. اقرأ [CONTRIBUTING.md](CONTRIBUTING.md) قبل فتح طلب سحب، والتزم بـ[قواعد السلوك](CODE_OF_CONDUCT.md).
+
+
+---
 
 ## 🛡️ الأمان
 
 إن وجدت مشكلة أمنية، فلا تفتح قضية عامة؛ راجع [SECURITY.md](SECURITY.md).
 
+
+---
+
 ## 📄 سجل التغييرات
 
 راجع [CHANGELOG.md](CHANGELOG.md) لمعرفة ما أُضيف في كل إصدار.
+
+
+---
 
 ## 📬 الدعم
 
@@ -216,3 +214,4 @@ Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabi
 ## 📜 الترخيص
 
 هذه المهارة مفتوحة المصدر ومتاحة للاستخدام الشخصي والتجاري والبحثي لدعم الخطبة العربية الموثقة.
+
